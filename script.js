@@ -159,7 +159,7 @@
 
 		},
 
-		_createNavigation: function (obj) {
+/*		_createNavigation: function (obj) {
 
 			var ul = this.navigation.querySelector('ul');
 			var _li = document.createElement('li');
@@ -194,7 +194,7 @@
 			}
 
 		},
-
+*/
 		_firstPosition: function () {
 
 			var self = this;
@@ -284,7 +284,7 @@
 
 			/*++++*/
 
-			function animateCurrNavItem (el) {
+/*			function animateCurrNavItem (el) {
 				
 				classie.addClass(el, 'active');
 				el.querySelector('.li__info').style.opacity = 0.3;
@@ -298,8 +298,8 @@
 					}
 				});
 
-			}
-
+			}*/
+			slidesTransitions();
 			function slidesTransitions () {
 
 				var nextIndex = self.current < self.imagesCount - 1 ? ++self.current : 0;
