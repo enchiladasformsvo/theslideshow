@@ -194,6 +194,7 @@
 			}
 
 		},
+
 		_firstPosition: function () {
 
 			var self = this;
@@ -297,8 +298,8 @@
 					}
 				});
 
-			}*/
-			slidesTransitions();
+			}
+
 			function slidesTransitions () {
 
 				var nextIndex = self.current < self.imagesCount - 1 ? ++self.current : 0;
