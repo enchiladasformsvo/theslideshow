@@ -41,7 +41,7 @@
 		this._init();
 	}
 
-/*
+
 	TSlider.prototype = {
 
 		_init: function() {
@@ -54,9 +54,9 @@
 			// Images total count
 			this.imagesCount = new Slice(this.Slider.querySelectorAll('img')).length;
 			// Slideshow interval
-			this.sldInterval = 6000;
+//			this.sldInterval = 6000;
 			// Control if it's animating
-			this.isAnimating = false;
+//			this.isAnimating = false;
 			// Current slide
 			this.current = 0;
 			// Minimum scale
@@ -66,7 +66,7 @@
 			this._createSlider();
 
 		},
- /*
+
 		/* --------------- */
 
 		_createSlider: function () {
@@ -159,7 +159,7 @@
 
 		},
 
-/*		_createNavigation: function (obj) {
+		_createNavigation: function (obj) {
 
 			var ul = this.navigation.querySelector('ul');
 			var _li = document.createElement('li');
@@ -194,7 +194,6 @@
 			}
 
 		},
-*/
 		_firstPosition: function () {
 
 			var self = this;
