@@ -41,7 +41,7 @@
 		this._init();
 	}
 
-
+/*
 	TSlider.prototype = {
 
 		_init: function() {
@@ -66,7 +66,7 @@
 			this._createSlider();
 
 		},
-
+ /*
 		/* --------------- */
 
 		_createSlider: function () {
