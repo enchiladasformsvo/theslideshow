@@ -283,7 +283,7 @@
 
 			/*++++*/
 
-/*			function animateCurrNavItem (el) {
+			function animateCurrNavItem (el) {
 				
 				classie.addClass(el, 'active');
 				el.querySelector('.li__info').style.opacity = 0.3;
