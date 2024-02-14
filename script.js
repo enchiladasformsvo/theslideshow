@@ -54,9 +54,9 @@
 			// Images total count
 			this.imagesCount = new Slice(this.Slider.querySelectorAll('img')).length;
 			// Slideshow interval
-//			this.sldInterval = 6000;
+			this.sldInterval = 6000;
 			// Control if it's animating
-//			this.isAnimating = false;
+			this.isAnimating = false;
 			// Current slide
 			this.current = 0;
 			// Minimum scale
