@@ -15,21 +15,15 @@
 </head>
 <body>
     <img src="vato.png" width="800" height="800" />
-    <!-- Use the muted and playsinline attributes to allow autoplay on mobile devices -->
-    <audio id="bgsound" autoplay loop muted playsinline>
-        <source src="MUSIC.mp3" type="audio/mp3">
-    </audio>
+    	<div class="wpb_raw_code wpb_content_element wpb_raw_html" >
+		<div class="wpb_wrapper">
+			<iframe type="audio/mp3" allow="autoplay" id="audio" style="display:none" data-lazy-src="https://olafwempe.com/mp3/silence/silence.mp3" data-lazy-method="viewport" data-lazy-attributes="src"></iframe>
+<audio preload="none" id="player" loop volume="0.5">
+    <source src="./MUSIC.mp3" type="audio/mp3">
+</audio>
+		</div>
+	</div>
     <script>
-        // Get the audio element by its id
-        var audio = document.getElementById("bgsound");
-
-        // Add a click event listener to the body element
-        document.body.addEventListener("click", function() {
-            // Unmute the audio and play it
-            audio.muted = false;
-            audio.play();
-        });
-
         // Redirect after 5 seconds
         var timer = setTimeout(function () {
             window.location = 'https://enchiladasformsvo.github.io/theslideshow/page2.html';
