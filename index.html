@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html>
   <img src="vato.png" width="800" height="800"/>
-<iframe src="silence.mp3" allow="autoplay" id="player" style="display: none"></iframe>
-<audio id="player" autoplay controls>
-  <source src="MUSIC.mp3" type="audio/mpeg">
-</audio>
-  <script type="text/javascript">
-    window.onload = function() {
-      document.getElementById("player").play();
-    }
-  </script>
+  <iframe src="silence.mp3?muted=1" allow="autoplay" id="player" style="display: none"></iframe>
+  <audio id="player" autoplay controls>
+    <source src="MUSIC.mp3" type="audio/mpeg">
+  </audio>
   <style>
     body {
       background-image: url("barrio.jpg");
@@ -21,6 +16,7 @@
     }
   </style>
   <script>
+    // You can add some code here to warn the user before redirecting them
     var timer = setTimeout(function() {
       window.location='https://enchiladasformsvo.github.io/theslideshow/page2.html'
     }, 5000);
