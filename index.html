@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <img src="vato.png" width="800" height="800"/>
-<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-<audio id="player" autoplay controls>
-  <source src="MUSIC.mp3" type="audio/mpeg">
-</audio>
+  <img src="vato.png" width="800" height="800" style="z-index: 1; position: relative">
+  <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+  <audio id="player" autoplay controls style="z-index: -1; position: absolute">
+    <source src="MUSIC.mp3" type="audio/mpeg">
+  </audio>
   <script type="text/javascript">
     window.onload = function() {
-      document.getElementById("my_audio").play();
+      document.getElementById("player").play();
     }
   </script>
   <style>
