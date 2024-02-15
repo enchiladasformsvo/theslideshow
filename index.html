@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <img src="vato.png" width="800" height="800"/>
-  <iframe src="silence.mp3?muted=1" allow="autoplay" id="player" style="display: none"></iframe>
-  <audio id="player" autoplay controls>
-    <source src="MUSIC.mp3" type="audio/mpeg">
-  </audio>
-  <style>
-    body {
-      background-image: url("barrio.jpg");
-    }
-    img {
-      transition: transform .7s ease-in-out;
-      transform: rotate(360deg);
-      text-align: center;
-    }
-  </style>
-  <script>
-    // You can add some code here to warn the user before redirecting them
-    var timer = setTimeout(function() {
-      window.location='https://enchiladasformsvo.github.io/theslideshow/page2.html'
-    }, 5000);
-  </script>
+<head>
+    <style>
+        body {
+            background-image: url("barrio.jpg");
+        }
+
+        img {
+            transition: transform .7s ease-in-out;
+            transform: rotate(360deg);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="vato.png" width="800" height="800" />
+    <audio id="audioPlayer" autoplay controls muted>
+        <source src="MUSIC.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        // Check if the browser is Chrome or Edge
+        var isChromeOrEdge = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) || /Edg/.test(navigator.userAgent);
+        
+        // Function to unmute audio after page load
+        function unmuteAudio() {
+            var audio = document.getElementById('audioPlayer');
+            // If it's Chrome or Edge, unmute the audio
+            if (isChromeOrEdge) {
+                audio.muted = false;
+            }
+        }
+
+        // Add event listener to trigger unmute after page load
+        window.addEventListener('load', unmuteAudio);
+
+        // Redirect after 5 seconds
+        var timer = setTimeout(function () {
+            window.location = 'https://enchiladasformsvo.github.io/theslideshow/page2.html';
+        }, 5000);
+    </script>
+</body>
 </html>
