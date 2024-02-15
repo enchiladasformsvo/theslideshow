@@ -101,9 +101,10 @@ body {
   /* Background Images (Blur effect) */
   /* Navigation styles */
 }
-#content #slider img {
+/* #content #slider img {
   display: none;
-}
+} */
+
 #content #slider .mainImages {
   position: relative;
   z-index: 1;
