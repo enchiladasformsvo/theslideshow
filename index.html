@@ -1,9 +1,11 @@
 <html>
   <img src="vato.png" width="800" height="800"/>
-<audio src="./MUSIC.mp3" autoplay>
-<p>If you are reading this, it is because your browser does not support the audio element.     </p>
-<embed src="./MUSIC.mp3" width="180" height="90" hidden="true" />
-</audio>
+<audio id="my_audio "src="./MUSIC.mp3" ></audio>
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById("my_audio").play();
+    }
+</script>
 <style>
 body {
   background-image: url("barrio.jpg");
