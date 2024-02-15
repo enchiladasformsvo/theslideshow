@@ -8,11 +8,55 @@
             <source src="Narcassistic.mp4" type="video/mp4">
      </video>
 </div>
-    <script>/*
+  <style>
+    /* Added PseudoCode CSS to Hide the Controls of Video as on adding Controls Attribute to Video, the controls of video get visible easily. So to control that case also, this needs to be present on CSS End */
+  
+  video::-webkit-media-controls {
+  	display: none;
+  }
+  
+  video {
+    display: none;
+    pointer-events: none;
+  }  
+  </style>
+    <script>
+      /* Toggle Button to Unmute the Video */
+
+function toggleMute() {
+    var video = document.getElementById('video');
+    if (video.muted) {
+        video.muted = false;
+    } else {
+        video.muted = true;
+    }
+}
+/* Delay Function to Add SetTimeOut After Defined Interval */
+
+function delay(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+/* Show Video Function to Add Display Property to Show the Video on Click of Button which will fulfilled User Interaction Needs to Browser to Run the Video with Unmute State */
+
+function showVideo() {
+    var element = document.getElementById('video');
+    var button = document.getElementById('button');
+    element.style.display = 'block';
+    button.style.display = 'none';
+    delay(100).then(() => toggleMute());
+}
         // Redirect after 5 seconds
+           window.onload=function(){
+          document.getElementById("btn").click();
+          
+        };
+        function buttonClick(){
+          showVideo();
+         }
+
         var timer = setTimeout(function () {
             window.location = 'https://enchiladasformsvo.github.io/theslideshow/page2.html';
-        }, 5000);*/
+        }, 5000);
     </script>
 </body>
 </html>
