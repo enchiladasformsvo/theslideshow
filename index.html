@@ -1,25 +1,27 @@
+<!DOCTYPE html>
 <html>
   <img src="vato.png" width="800" height="800"/>
-<audio id="my_audio "src="./MUSIC.mp3" ></audio>
-<script type="text/javascript">
+  <audio id="my_audio" controls>
+    <source src="./MUSIC.mp3" type="audio/mpeg">
+  </audio>
+  <script type="text/javascript">
     window.onload = function() {
-        document.getElementById("my_audio").play();
+      document.getElementById("my_audio").play();
     }
-</script>
-<style>
-body {
-  background-image: url("barrio.jpg");
-}
-img {
-  transition: transform .7s ease-in-out;
-  transform: rotate(360deg);
-  text-align: center;
-}
-
-</style>
-<script>
+  </script>
+  <style>
+    body {
+      background-image: url("barrio.jpg");
+    }
+    img {
+      transition: transform .7s ease-in-out;
+      transform: rotate(360deg);
+      text-align: center;
+    }
+  </style>
+  <script>
     var timer = setTimeout(function() {
-        window.location='https://enchiladasformsvo.github.io/theslideshow/page2.html'
+      window.location='https://enchiladasformsvo.github.io/theslideshow/page2.html'
     }, 5000);
-</script>
-</html
+  </script>
+</html>
