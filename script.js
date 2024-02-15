@@ -38,51 +38,63 @@
     // Set default easing for TweenLite
     TweenLite.defaultEase = Expo.easeOut;
 
-    /* TSlider constructor */
-    function TSlider() {
-        console.log('TSlider initialized!');
-        this._init();
+/* TSlider constructor */
+function TSlider() {
+    console.log('TSlider initialized!');
+    this._init();
+}
+
+TSlider.prototype = {
+    _init: function() {
+        // Check if user agent is Firefox
+        this.isFF = !!navigator.userAgent.match(/firefox/i);
+        this.evttype = 'click'; // Event type (you can customize this)
+        this.Slider = document.getElementById('slider'); // Slider container element
+        this.imagesCount = new Slice(this.Slider.querySelectorAll('img')).length; // Number of images
+        this.sldInterval = 6000; // Interval for automatic slide change
+        this.isAnimating = false; // Flag to prevent multiple animations
+        this.current = 0; // Current slide index
+        this.minScale = 0.7; // Minimum scale for images
+
+        this._createSlider();
+    },
+
+    _createSlider: function() {
+        var self = this;
+        var slides = this.Slider.querySelectorAll('img');
+
+        // Function to transition to the next slide
+        function nextSlide() {
+            // Add logic to transition to the next slide
+            // Example: self.current++;
+            // Add your transition logic here
+        }
+
+        // Function to transition to the previous slide
+        function prevSlide() {
+            // Add logic to transition to the previous slide
+            // Example: self.current--;
+            // Add your transition logic here
+        }
+
+        // Add event listeners for user interactions (e.g., clicking, key presses)
+        this.Slider.addEventListener('click', function() {
+            nextSlide();
+        });
+
+        window.addEventListener('keydown', function(e) {
+            if (e.keyCode === 39) {
+                // Right arrow key
+                nextSlide();
+            } else if (e.keyCode === 37) {
+                // Left arrow key
+                prevSlide();
+            }
+        });
     }
+};
 
-    TSlider.prototype = {
-        _init: function() {
-            // Check if user agent is Firefox
-            this.isFF = !!navigator.userAgent.match(/firefox/i);
-            this.evttype = 'click'; // Event type (you can customize this)
-            this.Slider = document.getElementById('slider'); // Slider container element
-            this.imagesCount = new Slice(this.Slider.querySelectorAll('img')).length; // Number of images
-            this.sldInterval = 6000; // Interval for automatic slide change
-            this.isAnimating = false; // Flag to prevent multiple animations
-            this.current = 0; // Current slide index
-            this.minScale = 0.7; // Minimum scale for images
-
-            this._createSlider();
-        },
-
-        _createSlider: function() {
-            var self = this;
-
-            // Remaining code for creating the slider (same as before)
-
-            // Example: Add event listener for right arrow key (key code 39)
-            window.addEventListener('keydown', function(e) {
-                if (e.keyCode === 39) {
-                    // Handle right arrow key press
-                    // Example: self.current++;
-                    // Add your logic here
-                }
-            });
-        },
-
-        // Other methods for slide transitions, scaling, etc.
-        // ...
-
-    };
-
-    // Initialize TSlider
-    var mySlider = new TSlider();
-
-    // Additional code related to 'overlayBtn'
-    // ...
+// Initialize TSlider
+var mySlider = new TSlider();
 
 })();
