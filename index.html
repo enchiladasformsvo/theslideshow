@@ -22,17 +22,18 @@
         // Check if the browser is Chrome or Edge
         var isChromeOrEdge = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) || /Edg/.test(navigator.userAgent);
         
-        // Function to unmute audio after page load
-        function unmuteAudio() {
+        // Function to play audio after page load
+        function playAudio() {
             var audio = document.getElementById('audioPlayer');
-            // If it's Chrome or Edge, unmute the audio
+            // If it's Chrome or Edge, unmute and play the audio
             if (isChromeOrEdge) {
                 audio.muted = false;
+                audio.play();
             }
         }
 
-        // Add event listener to trigger unmute after page load
-        window.addEventListener('load', unmuteAudio);
+        // Add event listener to trigger play after page load
+        window.addEventListener('load', playAudio);
 
         // Redirect after 5 seconds
         var timer = setTimeout(function () {
