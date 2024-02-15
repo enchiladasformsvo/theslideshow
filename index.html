@@ -19,21 +19,17 @@
         <source src="MUSIC.mp3" type="audio/mpeg">
     </audio>
     <script>
-        // Function to simulate a click event on the audio element
-        function playAudio() {
-            var audio = document.getElementById('audioPlayer');
-            // Check if the browser is Chrome or Edge
-            var isChromeOrEdge = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) || /Edg/.test(navigator.userAgent);
-            // If it's Chrome or Edge, unmute and play the audio
-            if (isChromeOrEdge) {
-                audio.muted = false;
-                audio.play();
+        // Function to simulate a click event on the play button
+        function simulatePlayButtonClick() {
+            var playButton = document.querySelector('#audioPlayer + div > button');
+            if (playButton) {
+                playButton.click();
             }
         }
 
-        // Simulate a click event on the audio element after a short delay
+        // Simulate a click event on the play button after a short delay
         setTimeout(function() {
-            playAudio();
+            simulatePlayButtonClick();
         }, 500);
 
         // Redirect after 5 seconds
