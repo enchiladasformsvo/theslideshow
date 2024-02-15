@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
 <head>
     <style>
         body {
@@ -16,23 +15,20 @@
 </head>
 <body>
     <img src="vato.png" width="800" height="800" />
-    <iframe src="./silence.mp3" type="audio/mp3" allow="autoplay" style="display:none"></iframe>
-        <audio id="bgsound" autoplay loop>
-  <source src="MUSIC.mp3" type="audio/mp3">
-</audio>
+    <!-- Use the muted and playsinline attributes to allow autoplay on mobile devices -->
+    <audio id="bgsound" autoplay loop muted playsinline>
+        <source src="MUSIC.mp3" type="audio/mp3">
+    </audio>
     <script>
-        // Function to simulate a click event on the play button
-        function simulatePlayButtonClick() {
-            var playButton = document.querySelector('#audioPlayer + div > button');
-            if (playButton) {
-                playButton.click();
-            }
-        }
+        // Get the audio element by its id
+        var audio = document.getElementById("bgsound");
 
-        // Simulate a click event on the play button after a short delay
-        setTimeout(function() {
-            simulatePlayButtonClick();
-        }, 500);
+        // Add a click event listener to the body element
+        document.body.addEventListener("click", function() {
+            // Unmute the audio and play it
+            audio.muted = false;
+            audio.play();
+        });
 
         // Redirect after 5 seconds
         var timer = setTimeout(function () {
