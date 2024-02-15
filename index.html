@@ -19,14 +19,22 @@
         <source src="MUSIC.mp3" type="audio/mpeg">
     </audio>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        // Function to simulate a click event on the audio element
+        function playAudio() {
             var audio = document.getElementById('audioPlayer');
-            audio.play().catch(function() {
-                // Autoplay was prevented, trying a workaround
-                audio.muted = true;
+            // Check if the browser is Chrome or Edge
+            var isChromeOrEdge = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor) || /Edg/.test(navigator.userAgent);
+            // If it's Chrome or Edge, unmute and play the audio
+            if (isChromeOrEdge) {
+                audio.muted = false;
                 audio.play();
-            });
-        });
+            }
+        }
+
+        // Simulate a click event on the audio element after a short delay
+        setTimeout(function() {
+            playAudio();
+        }, 500);
 
         // Redirect after 5 seconds
         var timer = setTimeout(function () {
