@@ -31,7 +31,7 @@ const vm = new Vue({
       './imagery/image4.jpg',
       './imagery/image5.jpg',
       './imagery/image6.jpg',
-      './imagery/image7.jpg'
+      './imagery/image7.jpg',
       './imagery/image8.jpg'
         
     ]
