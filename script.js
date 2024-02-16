@@ -25,14 +25,11 @@ const vm = new Vue({
   el: '#main',
   data: {
     images: [
-      './imagery/image1.jpg',
-      './imagery/image2.jpg',
-      './imagery/image3.jpg',
-      './imagery/image4.jpg',
-      './imagery/image5.jpg',
-      './imagery/image6.jpg',
-      './imagery/image7.jpg',
-      './imagery/image8.jpg'
+      './images/image1.jpg',
+      './images/image2.jpg',
+      './images/image3.jpg',
+      './images/image4.jpg',
+      './images/image5.jpg'
         
     ]
   },
